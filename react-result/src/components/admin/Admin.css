@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    transition: 0.4s;
+}
+
+body {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px;
+    /* background-image: url(background.jpg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 90vh;
+    background-color: #ffffff40;
+    backdrop-filter: blur(20px);
+    border: 2px solid #ffffff30;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 15px -5px #00000030;
+    padding: 15px;
+}
+
+.toggle-menu {
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.toggle-menu i {
+    color: #81305d;
+    font-size: 2.5em;
+}
+
+.nav-items {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 65vh;
+}
+
+.admin-profile,
+.item-list,
+.logout {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.item-list:hover,
+.logout:hover {
+    background-color: #ffffff60;
+}
+
+.admin-profile {
+    margin: 40px 0;
+    background-color: #ffffff70;
+}
+
+.logout {
+    margin-top: 30px;
+}
+
+.icons {
+    width: 50px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.icons img {
+    width: 40px;
+    height: 40px;
+}
+
+.icons i {
+    font-size: 2em;
+    color: #81305d;
+}
+
+span {
+    display: flex;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #81305d;
+    margin-left: 10px;
+}
