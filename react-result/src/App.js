@@ -13,7 +13,7 @@ function App() {
   <Route exact path="/" component={Result} />
   <Route exact path="/result" component={Result} />
   <Route path="/all" component={All} />
-  <Route path="/admin-panel" component={Admin} />
+  <Route path="/admin" component={Admin} />
   <Route component={ErrorPage}></Route>
 </Switch>
     </div>

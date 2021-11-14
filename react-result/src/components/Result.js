@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import '../components/index.css'
 import { Link } from 'react-router-dom';
+import './style.css'
 export default class Result extends Component {
     constructor(props) {
         super(props);
@@ -27,8 +27,6 @@ export default class Result extends Component {
                 });
             });
     }
-
-
     render() {
         return (
             <div>

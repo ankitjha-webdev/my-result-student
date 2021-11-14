@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -15,10 +15,10 @@ body {
     align-items: center;
     min-height: 100vh;
     padding: 30px;
-    /* background-image: url(background.jpg); */
+    background-image: url(background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-}
+} */
 
 .navbar {
     display: flex;
@@ -35,6 +35,7 @@ body {
     overflow: hidden;
     box-shadow: 0 0 15px -5px #00000030;
     padding: 15px;
+    float: left;
 }
 
 .toggle-menu {
@@ -110,3 +111,12 @@ span {
     color: #81305d;
     margin-left: 10px;
 }
+.section {
+    background-color: var(--white-alpha-25);
+    border: 1px solid var(--white-alpha-40);
+    min-height: calc(100vh - 70px);
+    border-radius: 30px;
+    backdrop-filter: var(--backdrop-filter-blur);
+    width: calc(100% - 330px);
+    float: right;
+  }

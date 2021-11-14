@@ -39,6 +39,11 @@ public class Result {
 
     @Column(name = "grade")
     private String grade;
+
+
+
+
+	
 }
 
 /*Table: external

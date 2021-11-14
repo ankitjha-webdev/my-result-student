@@ -10,13 +10,13 @@ function ErrorPage() {
     
             <div class="text-center pt-2 pb-7">
                 <h1 class="remix-caught-status remix-text-glow">
-                    <span >4</span>
-                    <span >0</span>
-                    <span >4</span>
+                    <p >4</p>
+                    <p>0</p>
+                    <p >4</p>
                 </h1>
                 <div class="text-base font-mono">That page was not found!</div>
                <div className=" text-base font-mono">
-                    <Link to="/">Go to Home</Link>
+                    <Link to="/"> <button className="btn">Go to Home</button> </Link>
                 </div>
 
             </div>
