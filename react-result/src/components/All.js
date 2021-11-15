@@ -13,7 +13,7 @@ export default class All extends Component {
         this.findAllResults()
     }
     findAllResults() {
-        axios.get('http://localhost:8080/api/result/all')
+        axios.get('http://localhost:8081/api/result/all')
             .then(response => response.data)
             .then((data) => {
                 this.setState({

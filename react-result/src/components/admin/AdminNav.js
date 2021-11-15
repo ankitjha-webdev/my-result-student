@@ -1,5 +1,5 @@
 import React from 'react'
-
+import ListEmployeeComponent from './ListEmployeeComponent'
 export default function AdminNav() {
     return (
         <div>
@@ -27,12 +27,14 @@ export default function AdminNav() {
                 </div>
                 <span>Upload Excel</span>
             </div>
-            {/* <div class="item-list">
+            {/* <button className="btn btn-primary" onClick={this.addEmployee}> */}
+            <div class="item-list">
                 <div class="icons">
-                    <i class="far fa-comment-dots"></i>
+                <i class="fas fa-user-plus"></i>
                 </div>
-                <span>Messages</span>
-            </div> */}
+                <span>Add Student</span>
+            </div>
+            {/* </button> */}
             <div class="item-list">
                 <div class="icons">
                     <i class="fas fa-users"></i>

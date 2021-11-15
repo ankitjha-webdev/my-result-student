@@ -47,7 +47,7 @@ body {
 }
 
 .toggle-menu i {
-    color: #81305d;
+    color: #e02f6b;
     font-size: 2.5em;
 }
 
@@ -100,7 +100,7 @@ body {
 
 .icons i {
     font-size: 2em;
-    color: #81305d;
+    color: #e02f6b;
 }
 
 span {
@@ -108,7 +108,7 @@ span {
     font-size: 1.5em;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #81305d;
+    color: #e02f6b;
     margin-left: 10px;
 }
 .section {
@@ -117,6 +117,6 @@ span {
     min-height: calc(100vh - 70px);
     border-radius: 30px;
     backdrop-filter: var(--backdrop-filter-blur);
-    width: calc(100% - 330px);
+    width: calc(100% - 326px);
     float: right;
   }
