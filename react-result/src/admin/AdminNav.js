@@ -1,9 +1,7 @@
 import React from 'react'
-import ListEmployeeComponent from './ListEmployeeComponent'
 export default function AdminNav() {
     return (
-        <div>
-            
+        <div>     
 <nav class="navbar" id="nav">
         <button class="toggle-menu" id="menu">
             <i class="fas fa-bars"></i>
@@ -41,7 +39,7 @@ export default function AdminNav() {
                 </div>
                 <span>Users
                 </span>
-            </div>
+            </div> 
             <div class="item-list">
                 <div class="icons">
                     <i class="fas fa-list"></i>

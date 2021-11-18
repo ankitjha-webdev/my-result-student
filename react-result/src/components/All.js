@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import '../App'
 export default class All extends Component {
    constructor(props) {
         super(props);
@@ -13,7 +12,7 @@ export default class All extends Component {
         this.findAllResults()
     }
     findAllResults() {
-        axios.get('http://localhost:8081/api/result/all')
+        axios.get('http://localhost:8085/api/students/all')
             .then(response => response.data)
             .then((data) => {
                 this.setState({

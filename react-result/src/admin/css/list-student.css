@@ -89,10 +89,10 @@ tbody td:hover:before {
     font-size: 20px;
     list-style: none;
 } */
-a{
+/* a{
     color: #fff;
     text-decoration: none;
-}
+} */
 
 /* Left Container */
 .left-container {
@@ -129,7 +129,7 @@ h3{
     
 }
 /* button */
-.button{
+/* .button{
     background-color: #fff;
     color: #55608f;
     border: none;
@@ -141,7 +141,7 @@ h3{
     margin: 3px 23px;
     cursor: pointer;
     border-radius: 5px;
-}
+} */
 
 
 /* .btn{
@@ -165,7 +165,7 @@ h3{
     margin-top: 1em;
 }
 /* btn btn-info */
-.btn{
+/* .btn{
   background-color: #fff;
   color: #55608f;
   border: none;
@@ -177,7 +177,7 @@ h3{
   margin: -10px 0px;
   cursor: pointer;
   border-radius: 5px;
-}
+} */
 
 /* card col-md-6 offset-md-3 text-muted bg */
 .card{

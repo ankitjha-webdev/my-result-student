@@ -28,7 +28,7 @@ import com.project.result.exception.ResourceNotFoundException;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/api/result")
+@RequestMapping("/api/students")
 public class ResultController {
 
     @Autowired
@@ -43,49 +43,65 @@ public class ResultController {
         return resultRepository.findAll();
     
     }
-//    Add Student Result
-    @PostMapping("/addresult")
-	public Result createResult(@RequestParam Result result) {
-		return resultRepository.save(result);
-	}
- // get student by registration
-// 	@GetMapping("/employees/{id}")
-// 	public ResponseEntity<Result> getEmployeeByRegistrationno(@PathVariable Long Registrationno) {
-// 		Result result = ( resultRepository.findByRegistrationno(Registrationno))
-// 				.orElseThrow(() -> new ResourceNotFoundException("Student not exist with registration :" + Registrationno));
-// 		return ResponseEntity.ok(result);
-// 	}
-// 	
+	
     @GetMapping("/byregno/{regno}")
     public List<Result> getresultbyreg(@PathVariable long regno) {
         return this.resultRepository.findByRegistrationno(regno);
     }
     
- // update Result 
+	// Create delete and update 
 	
- 	@PutMapping("/byregno/{regno}")
- 	public ResponseEntity<Result> updateResult(@PathVariable Long registrationno, @RequestBody Result resultDetails){
- 		Result result = resultRepository.findByRegistrationno(registrationno)
- 				.orElseThrow(() -> new ResourceNotFoundException("Student not exist with id :" + id));
- 		
- 		result.setName(resultDetails.getName());
- 		result.setRegistrationno(resultDetails.getRegistrationno());
- 		result.setSem(resultDetails.getSem());
- 		
- 		Result updatedResult = resultRepository.save(result);
- 		return ResponseEntity.ok(updatedResult);
- 	}
- // delete Result rest api
- 	@DeleteMapping("/result/{id}")
- 	public ResponseEntity<Map<String, Boolean>> deleteResult(@PathVariable Long id){
- 		Result result = resultRepository.findById(id)
- 				.orElseThrow(() -> new ResourceNotFoundException("Student not exist with this Registration Number :" + id));
- 		
- 		resultRepository.delete(result);
- 		Map<String, Boolean> response = new HashMap<>();
- 		response.put("deleted", Boolean.TRUE);
- 		return ResponseEntity.ok(response);
- 	}
+	// get all results
+	@GetMapping("/results")
+	public List<Result> getAllResultss(){
+		return resultRepository.findAll();
+	}		
+	
+	// create result rest api
+	@PostMapping("/results")
+	public Result createResult(@RequestBody Result result) {
+		return resultRepository.save(result);
+	}
+	
+	// get employee by id rest api
+	@GetMapping("/results/{id}")
+	public ResponseEntity<Result> getResultById(@PathVariable Integer id) {
+		Result result = resultRepository.findById(id)
+				.orElseThrow(() -> new ResourceNotFoundException("Result not exist with id :" + id));
+		return ResponseEntity.ok(result);
+	}
+	
+	// update employee rest api
+	
+	@PutMapping("/results/{id}")
+	public ResponseEntity<Result> updateResult(@PathVariable Integer id, @RequestBody Result resultDetails){
+		Result result = resultRepository.findById(id)
+				.orElseThrow(() -> new ResourceNotFoundException("Result not exist with id :" + id));
+		
+		result.setName(resultDetails.getName());
+		result.setRegistrationno(resultDetails.getRegistrationno());
+		result.setSem(resultDetails.getSem());
+		result.setSubjectcode(resultDetails.getSubjectcode());
+		result.setSubjectname(resultDetails.getSubjectname());
+		result.setSubjecttype(resultDetails.getSubjecttype());
+		result.setSubjectcredit(resultDetails.getSubjectcredit());
+		result.setGrade(resultDetails.getGrade());
+		Result updateResult = resultRepository.save(result);
+		return ResponseEntity.ok(updateResult );
+	}
+	
+	// delete Result rest api
+	@DeleteMapping("/results/{id}")
+	public ResponseEntity<Map<String, Boolean>> deleteResult(@PathVariable Integer id){
+		Result result = resultRepository.findById(id)
+				.orElseThrow(() -> new ResourceNotFoundException("Result not exist with id :" + id));
+		
+		resultRepository.delete(result); 
+		Map<String, Boolean> response = new HashMap<>();
+		response.put("deleted", Boolean.TRUE);
+		return ResponseEntity.ok(response);
+	}
+	
     
 //    Excel File Uploading
     @PostMapping("/excel/upload")

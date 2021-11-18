@@ -18,7 +18,7 @@ export default class Result extends Component {
         });
     }
     getreg() {
-        axios.get(`http://localhost:8080/api/result/byregno/${this.state.regno}`)
+        axios.get(`http://localhost:8085/api/students/byregno/${this.state.regno}`)
             .then(response => response.data)
             .then((data) => {
                 console.log(data)

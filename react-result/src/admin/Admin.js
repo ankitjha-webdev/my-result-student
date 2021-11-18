@@ -1,14 +1,14 @@
 import React from 'react'
 import '../admin/Admin.css'
 import AdminNav from './AdminNav'
-import ListEmployeeComponent from './ListEmployeeComponent'
+import ListResultComponent from '../components/ListResultComponent'
 export default function Admin() {
 
     return (
         <div>
             <AdminNav />
             <section className="section">
-             <ListEmployeeComponent/>
+          <ListResultComponent/>
             </section>
         </div>
     )
